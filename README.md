@@ -43,3 +43,17 @@ $ irb
 1.9.3-p194 :011 > node3.print_nodes
  => "3 -> 2 -> 1"
 ```
+
+### Bubble Sort
+
+In `lib/custom_sort.rb`, `bubble_sort` method.
+
+```ruby
+$ irb
+1.9.3-p194 :001 > load 'lib/custom_sort.rb'
+ => true
+1.9.3-p194 :002 > array = CustomSort.new([1, 4, 3, 2, 5])
+ => #<CustomSort:0x007fabf389a0e8 @base=[1, 4, 3, 2, 5]>
+1.9.3-p194 :003 > array.bubble_sort
+ => [5, 4, 3, 2, 1] 
+```
