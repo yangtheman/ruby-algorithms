@@ -20,4 +20,10 @@ describe CustomSort do
       @array.selection_sort.should == [1, 2, 3, 4, 5]
     end
   end
+
+  describe "#merge_sort" do
+    it "should sort given array" do
+      @array.merge_sort.should == [1, 2, 3, 4, 5]
+    end
+  end
 end
