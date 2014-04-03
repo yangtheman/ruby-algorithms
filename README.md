@@ -71,3 +71,17 @@ $ irb
 1.9.3-p194 :003 > array.selection_sort
  => [1, 2, 3, 4, 5]
 ```
+
+### Merge Sort
+
+In `lib/custom_sort.rb`, `merge_sort` method.
+
+```ruby
+$ irb
+1.9.3-p194 :001 > load 'lib/custom_sort.rb'
+ => true
+1.9.3-p194 :002 > array = CustomSort.new([1, 4, 3, 2, 5])
+ => #<CustomSort:0x007fb0dab6d5b8 @base=[1, 4, 3, 2, 5]>
+1.9.3-p194 :003 > array.merge_sort
+ => [1, 2, 3, 4, 5]
+```
