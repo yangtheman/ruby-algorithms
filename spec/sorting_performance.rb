@@ -9,4 +9,5 @@ Benchmark.bm do |x|
   x.report("Selection Sort") { to_sort.selection_sort }
   x.report("Merge Sort") { to_sort.merge_sort }
   x.report("Quick Sort") { to_sort.quick_sort }
+  x.report("Insertion Sort") { to_sort.insertion_sort }
 end

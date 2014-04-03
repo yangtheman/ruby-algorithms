@@ -3,7 +3,7 @@ require 'rspec'
 
 describe CustomSort do
 
-  let(:base) { [1, 2, 3, 4, 5] }
+  let(:base) { [5, 3, 2, 1, 4] }
 
   before do
     @array = CustomSort.new(base)
@@ -33,4 +33,9 @@ describe CustomSort do
     end
   end
 
+  describe "#insertion_sort" do
+    it "should sort given array" do
+      @array.insertion_sort.should == [1, 2, 3, 4, 5]
+    end
+  end
 end

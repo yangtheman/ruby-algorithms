@@ -100,6 +100,20 @@ $ irb
  => [1, 2, 3, 4, 5]
 ```
 
+### Insertion Sort
+
+In `lib/custom_sort.rb`, `insertion_sort` method.
+
+```ruby
+$ irb
+1.9.3-p194 :001 > load 'lib/custom_sort.rb'
+ => true
+1.9.3-p194 :002 > array = CustomSort.new([1, 4, 3, 2, 5])
+ => #<CustomSort:0x007fb0dab6d5b8 @base=[1, 4, 3, 2, 5]>
+1.9.3-p194 :003 > array.insertion_sort
+ => [1, 2, 3, 4, 5]
+```
+
 ### Sorting Performance Comparison
 
 Using an array with size of 10000 with random integers.
@@ -112,8 +126,9 @@ to_sort = CustomSort.new(array)
 ```sh
 $ ruby ./spec/sorting_performance.rb
                    user     system      total        real
-Bubble Sort     0.230000   0.000000   0.230000 (  0.231936)
-Selection Sort  0.090000   0.000000   0.090000 (  0.091988)
-Merge Sort      0.010000   0.000000   0.010000 (  0.005374)
-Quick Sort      0.110000   0.010000   0.120000 (  0.124551)
+Bubble Sort     0.270000   0.000000   0.270000 (  0.264657)
+Selection Sort  0.090000   0.000000   0.090000 (  0.093256)
+Merge Sort      0.010000   0.000000   0.010000 (  0.004939)
+Quick Sort      0.140000   0.010000   0.150000 (  0.156909)
+Insertion Sort  0.010000   0.000000   0.010000 (  0.000416)
 ```
