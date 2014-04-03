@@ -85,3 +85,35 @@ $ irb
 1.9.3-p194 :003 > array.merge_sort
  => [1, 2, 3, 4, 5]
 ```
+
+### Quick Sort
+
+In `lib/custom_sort.rb`, `quick_sort` method.
+
+```ruby
+$ irb
+1.9.3-p194 :001 > load 'lib/custom_sort.rb'
+ => true
+1.9.3-p194 :002 > array = CustomSort.new([1, 4, 3, 2, 5])
+ => #<CustomSort:0x007fb0dab6d5b8 @base=[1, 4, 3, 2, 5]>
+1.9.3-p194 :003 > array.quick_sort
+ => [1, 2, 3, 4, 5]
+```
+
+### Sorting Performance Comparison
+
+Using an array with size of 10000 with random integers.
+
+```ruby
+array = (1..1000).map { rand(2**32-1) + 1 }
+to_sort = CustomSort.new(array)
+```
+
+```sh
+$ ruby ./spec/sorting_performance.rb
+                   user     system      total        real
+Bubble Sort     0.230000   0.000000   0.230000 (  0.231936)
+Selection Sort  0.090000   0.000000   0.090000 (  0.091988)
+Merge Sort      0.010000   0.000000   0.010000 (  0.005374)
+Quick Sort      0.110000   0.010000   0.120000 (  0.124551)
+```

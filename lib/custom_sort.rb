@@ -52,4 +52,11 @@ class CustomSort
     merge_sort_merge(left_merge, right_merge)
   end
 
+  def quick_sort(array=@base)
+    return [] if array.empty?
+    pivot = array.pop
+    left, right = array.partition {|e| e < pivot}
+    quick_sort(left) + [pivot] + quick_sort(right)
+  end
+
 end

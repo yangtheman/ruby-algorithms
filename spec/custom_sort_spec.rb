@@ -26,4 +26,11 @@ describe CustomSort do
       @array.merge_sort.should == [1, 2, 3, 4, 5]
     end
   end
+
+  describe "#quick_sort" do
+    it "should sort given array" do
+      @array.quick_sort.should == [1, 2, 3, 4, 5]
+    end
+  end
+
 end
